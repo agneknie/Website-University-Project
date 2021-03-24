@@ -1,0 +1,580 @@
+/*
+•I am using vw and % for sizes, because they are responsive and I found them the
+easiest to work with to get the sizes I needed to match my designs.
+•I also use flex design properties to get the most responsive and adaptable design,
+which is also easy to understand from a webpage design standpoint.
+•This CSS applies to every page except the homepage.
+•The CSS is split into 5 large chunks - general (html, body, custom font),
+body elements (header, navigation, footer), body element main(because it differs
+throughout all pages), media queries (tablet, desktop) and hover/touch detection.
+
+Written by Agne Knietaite
+Student User name: aca19ak
+*/
+
+
+
+/******************************************/
+/* General */
+/******************************************/
+/* Including custom fonts with different formats, so it works on all browsers */
+@font-face {
+    font-family: 'ADAM.CG PRO';
+    src: url('../fonts/ADAM.CG PRO.woff2') format('woff2'),
+        url('../fonts/ADAM.CG PRO.woff') format('woff'),
+		url('../fonts/ADAM.CG PRO.otf') format('otf'),
+		url('../fonts/ADAM.CG PRO.eot') format('eot'),
+		url('../fonts/ADAM.CG PRO.svg') format('svg'),
+		url('../fonts/ADAM.CG PRO.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+	font-family: 'Estrangelo Edessa';
+	src:  url('../fonts/Estrangelo Edessa.woff2') format('woff2'),
+        url('../fonts/Estrangelo Edessa.woff') format('woff'),
+		url('../fonts/Estrangelo Edessa.eot') format('eot'),
+		url('../fonts/Estrangelo Edessa.svg') format('svg'),
+		url('../fonts/Estrangelo Edessa.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Properties to make the RWD neater, mainly for the ranges between breakpoints*/
+html{
+	background-color: rgb(0, 0, 0);
+	min-height:100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+/******************************************/
+body{
+	margin: 0;
+	background-color: rgb(255, 255, 255);
+}
+/******************************************/
+
+
+/******************************************/
+/* <body> elements */
+/******************************************/
+header, footer, nav{
+	font-family: 'ADAM.CG PRO';
+	font-weight: normal;
+	font-style: normal;
+}
+/* <header> properties */
+header{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: black;
+	border-bottom-style: solid;
+	border-width: medium;
+	border-color: rgb(212, 212, 212);
+	padding: 2% 0%; 
+}
+header img{
+	width: 15%;
+}
+#banner-text{
+	display: flex;
+	align-items: flex-end;
+	color: rgb(212, 212, 212);
+	margin: 0% 0% 0% 2%;
+	font-size: 5vw;
+	
+}
+/******************************************/
+/* <nav> properties */
+nav{
+	background-color: rgb(0, 0, 0);
+}
+.flex-nav{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.button{
+	/* Applies to all screen sizes */
+	display: flex;
+	align-items: center;
+	color: rgb(212, 212, 212);
+	text-decoration: none;
+	/* Below properties change based on screen size */
+	font-size: 5vw;
+	height: 10vw;
+}
+/******************************************/
+/* <footer> properties */
+footer{
+	display: flex;
+	flex-direction: row;
+	background-color: rgb(0, 0, 0);
+	color: rgb(212, 212, 212);
+	font-size: 2vw;
+	padding: 2% 2%;
+}
+footer aside{
+	text-align: right;
+	width: 70%;
+}
+/******************************************/
+
+
+/******************************************/
+/* <main> properties*/
+/******************************************/
+main{
+	font-family: 'Estrangelo Edessa';
+	font-weight: normal;
+    font-style: normal;
+	padding: 2%;
+	font-size: 4vw;
+}
+h1, h2{
+	font-family: 'ADAM.CG PRO';
+	font-weight: normal;
+	font-style: normal;
+}
+h1{
+	font-size: 6vw;
+}
+h2{
+	font-size: 4vw;
+	text-align: center;
+	margin: 2% 0%;
+}
+main p{
+	margin: 0%;
+	font-size: 4vw;
+}
+.margin{
+	margin: 2% 0%;
+}
+/******************************************/
+/* contact.html properties */
+form{
+	display: flex;
+	flex-direction: column;
+	border: solid thick rgb(0, 0, 0);
+	overflow: auto;
+	
+}
+.prompt{
+	font-weight: bold;
+}
+.form-align{
+	display: flex;
+	flex-direction: column;
+	margin: 5% 2%;
+}
+.bold-text{
+	font-weight: bold;
+}
+label{
+	font-size: 3.5vw;
+}
+textarea {
+   resize: none;
+   height: 10vw;
+   width: 99%;
+   border: solid medium rgb(0, 0, 0);
+}
+input{
+	border: solid medium rgb(0, 0, 0);
+}
+#submit-align{
+	display: flex;
+	align-items: center;
+}
+#submit{
+	font-family: 'ADAM.CG PRO';
+	font-size: 3.5vw;
+	background-color: rgb(255, 255, 255);
+	border: solid medium rgb(0, 0, 0);
+	height: 10vw;
+	width: 30vw;
+}
+/******************************************/
+/* quiz.html properties*/
+.quiz{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.images-quiz{
+	width: 100%;
+	border: solid medium rgb(0, 0, 0);
+	padding: 0%;
+}
+.answer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: solid medium rgb(212, 212, 212);
+	text-align: center;
+	color: rgb(255, 255, 255);
+	height: 12vw;
+	padding: 0% 2%
+}
+.element-quiz{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: auto;
+	padding: 2%;
+	margin: 3% 0%;
+}
+.text-center{
+	text-align: center;
+}
+/******************************************/
+/* areas.html properties*/
+ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	list-style: none;
+	padding: 0%;
+	margin: 2% 0%;
+}
+li{
+	margin: 0% 2.5%;
+}
+.areas-nav{
+	font-family: 'ADAM.CG PRO';
+	text-decoration: none;
+	color: rgb(232, 46, 46);
+	font-size: 6vw;
+}
+#img-map{
+	width: 100%;
+	margin-bottom: 10%;
+}
+.img-areas{
+	border: solid medium rgb(0, 0, 0);
+	width: 96%;
+	margin: 2% 2%;
+}
+.p-areas{
+	text-indent: 10%;
+	text-align: justify;
+	padding: 0% 2%;
+}
+.h1-areas{
+	margin: 4% 2%;
+}
+.link-areas{
+	text-decoration: none;
+	color: rgb(232, 46, 46);
+}
+.element-areas{
+	margin: 20% 0%;
+}
+figcaption{
+	color: rgb(0, 0, 0);
+	font-size: 5%;
+}
+/******************************************/
+/* blog.html properties */
+.element-blog{
+	margin: 10% 5%;
+}
+.img-blog{
+	width: 100%;
+	border: solid medium rgb(0, 0, 0);
+}
+.h-blog{
+	margin: 5%;
+	text-align: center;
+}
+.a-blog{
+	text-decoration: underline;
+	color: rgb(0, 0, 0);
+}
+.p-blog{
+	text-align: center;
+	font-size: 5vw;
+	margin: 5%;
+}
+.p-blog-story{
+	text-indent: 15%;
+	text-align: justify;
+	font-size: 4vw;
+	margin: 5% 0%;
+}
+.element-blog-story{
+	margin: 10%;
+}
+/******************************************/
+/* accessibility.html properties */
+.p-accessibility{
+	padding: 2%;
+}
+#h1-accessibility{
+	padding: 2%;
+}
+/******************************************/
+
+
+
+/******************************************/
+/* Media queries for responsiveness */
+/******************************************/
+/* Tablet */
+@media only screen and (min-width: 768px){
+	/* Header, navigation, footer */
+	#banner-text{
+		font-size: 6vw;
+	}
+	.flex-nav{
+		flex-direction: row;
+		justify-content: center;
+		
+	}
+	.button{
+		font-size: 2.5vw;
+		margin: 0% 3%;
+		height: 8vw;
+	}
+	footer{
+		font-size: 1.8vw;
+	}
+	main p{
+		font-size: 2.5vw;
+	}
+	h1{
+		font-size: 3.5vw;
+	}
+	h2{
+		font-size : 3vw;
+	}
+	
+	/* Contact */
+	#submit{
+		font-size: 3vw;
+		height: 8vw;
+		width: 24vw;
+	}
+	label{
+		font-size: 2.5vw;
+	}
+	
+	/* Quiz */
+	.element-quiz{
+		padding: 2%;
+		margin: 3% 10%;
+	}
+	
+	/* Areas */
+	.img-areas{
+		width: 80%;
+		margin: 2% 10%;
+	}
+	.p-areas{
+		text-indent: 10%;
+		padding: 0% 10%;
+	}
+	.h1-areas{
+		margin: 4% 10%;
+	}
+	.areas-nav{
+		font-size: 4vw;
+	}
+	.element-areas{
+		margin: 15% 0%;
+	}
+	
+	/* Blog*/
+	.element-blog{
+		width: 70%;
+		margin: 10% 15%;
+	}
+	.h-blog{
+		font-size: 4vw;
+	}
+	.p-blog{
+		font-size: 3.5vw;
+		margin: 5% 15%;
+	}
+	.p-blog-story{
+		font-size: 2.5vw;
+		margin: 5% 0%;
+	}
+}
+/******************************************/
+/* Desktop */
+@media only screen and (min-width: 1024px){
+	/* Header, navigation, footer */
+	header{
+		justify-content: flex-start;
+		padding: 1% 0% 1% 18%;
+	}
+	header img{
+		width: 7%;
+}
+	#banner-text{
+		color: rgb(212, 212, 212);
+		font-size: 3vw;
+	}
+	.button{
+		font-size: 1.5vw;
+		height: 4vw;
+	}
+	footer{
+		font-size: 1vw;
+	}
+	main p{
+		font-size: 1.7vw;
+	}
+	h1{
+		font-size: 2.5vw;
+	}
+	h2{
+		font-size: 2vw;
+	}
+	
+	/* Contact */
+	.form-align{
+		margin: 3% 2%
+	}
+	form{
+		width: 70%;
+	}
+	#submit{
+		font-size: 1.5vw;
+		height: 5vw;
+		width: 15vw;
+	}
+	label{
+		font-size: 1.5vw;
+	}
+	
+	/* Quiz */
+	.element-quiz{
+		flex-direction: row;
+	}
+	.images-quiz{
+		width: 50%;
+	}
+	.aside-quiz{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0% 2%;
+		width: 50%;
+	}
+	.answer{
+		height: 8vw;
+	}
+	
+	/* Areas */
+	.element-areas{
+		display: flex;
+		flex-direction: row;
+		width: 96%;
+		margin: 8% 0%;
+	}
+	.img-areas{
+		width: 100%;
+		margin: 0% 0%;
+	}
+	.aside-areas{
+		width: 40%;
+	}
+	.text-areas{
+		width: 60%;
+	}
+	.areas-nav{
+		font-size: 3vw;
+	}
+	li{
+	margin: 0% 2%;
+	}
+	#map{
+		display: flex;
+		flex-direction: row;
+		margin: 5% 0%;
+	}
+	#text-map{
+		display: flex;
+		flex-direction: column;
+		margin-top: 10%;	
+	}
+	
+	/* Blog */
+	.element-blog{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 5% 5%;
+		width: 40%;
+	}
+	.img-blog{
+		width: 80%;
+		margin: 0% 10%;
+	}
+	.p-blog{
+		font-size: 1.7vw;
+		margin: 2%;
+	}
+	.blog{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+	
+	}
+	.h-blog{
+		font-size: 1.7vw;
+	}
+	.p-blog-story{
+		font-size: 1.3vw;
+		text-indent: 5%;
+		margin: 0% 0% 2% 0%;
+	}
+	.element-blog-story{
+		display: flex;
+		flex-direction: row;
+		margin:0;
+	}
+	.right-story{
+		width: 40%;
+	}
+	.left-story{
+		margin-top: 7%;
+		width: 60%;
+	}
+}
+/******************************************/
+
+
+
+/******************************************/
+/* Hover/touch detection*/
+/******************************************/
+    .button:hover{
+		color: rgb(130, 130, 130);
+	}
+	#submit:hover{
+		background-color: rgb(212, 212, 212);
+	}
+	.areas-nav:hover{
+		color: rgb(0, 0, 0);
+	}
+	.a-blog:hover{
+	color: rgb(130, 130, 130);
+}
+/* quiz.html reveal answer */
+	/* For devices that have an accurate pointer (e.g. non-touch, desktops)*/
+	.answer:hover{
+		border: solid medium rgb(0, 0, 0);
+		color: rgb(0, 0, 0);
+	}
+	/* For devices that does not have an accurate pointer (e.g. touchscreens, mobiles, tablets)*/
+	.answer:focus{
+		border: solid medium rgb(0, 0, 0);
+		color: rgb(0, 0, 0);
+	}
+/******************************************/

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+Written by Agne Knietaite
+Student User name: aca19ak
+-->
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<!-- Including viewport: better compactability with mobile devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Including favicon-->
+	<link rel='icon' href='./images/logos/Favicon.ico' type='image/icon'>
+	
+	<title> The 4th Floor - Student Guide </title>
+	<meta name="author" content="Agne Knietaite">
+	<meta name="description" content="Student Guide of the 4th Floor of The Diamond">
+	
+	<!-- Including a stylesheet -->
+	<link rel="stylesheet" href="./css/everypage.css">
+	
+</head>
+	
+<body>
+	<header>	
+		<img src="./images/logos/LogoBanner.png" alt= "4th" >
+		<p id="banner-text"> Floor of The Diamond <p>
+	</header>
+	
+	<nav class="flex-nav">
+		<a href="./index.html" class="button"> Home </a>
+		<a href="./areas.html" class="button"> Areas </a>
+		<a href="./blog.html" class="button"> Blog </a>
+		<a href="./quiz.html" class="button"> Quiz </a>
+		<a href="./contact.html" class="button"> Contact </a>
+		<a href="./accessibility.html" class="button"> Accessibility </a>
+	</nav>
+	 
+	<main>
+		<p> Have any remarks/comments about the site? Noticed a mistake? Have a question?</p>
+		<h1> Contact me! </h1>
+		<p class="bold-text margin"> My details: </p>
+		<p> Agne Knietaite </p>
+		<p> aknietaite1@sheffield.ac.uk </p>
+		<p class="bold-text margin"> Or fill out the form below and I will get in touch!</p>
+		<form name="contact-form"
+			  action="https://www.dcs.shef.ac.uk/cgi-intranet/public/FormMail.pl"
+			  method="get">
+			<input type="hidden" name="recipient" value="aknietaite1@sheffield.ac.uk">
+			
+			<!-- You are: -->
+			<div class="form-align">
+				<label class="prompt"> You are: </label>
+				<div>
+					<input id="guest" type="radio" name="user-type" value="guest" checked>
+					<label for="guest"> Guest </label>
+				</div>
+				<div>
+					<input id="student" type="radio" name="user-type" value="student">
+					<label for="student"> Student of the University of Sheffield </label>
+				</div>
+				<div>
+					<input id="staff" type="radio" name="user-type" value="staff">
+					<label for="staff"> Staff of the University of Sheffield </label>
+				</div>
+			</div>
+			
+			<!-- Your name: -->
+			<div class="form-align">
+				<label for="user-name" class="prompt"> Your name: </label>
+				<input id="user-name" type="text" name="user-name" placeholder="Name Surname"
+						maxlength="50" size="50" required>
+			</div>
+			
+			<!-- Your email address: -->
+			<div class="form-align">
+				<label for="email" class="prompt"> Your email address: </label>
+				<input type="email" name="email" id="email" placeholder="email@domain.com"
+						maxlength="50" size="50" required>
+			</div>
+			<!-- Your comment: -->
+			<div class="form-align">
+				<label for="comments" class="prompt"> Your comment: </label>
+				<textarea name="comments" id="comments" rows="10" cols="50" required> </textarea>
+			</div>
+			
+			<div class="form-align" id="submit-align">
+				<input type="submit" name="submit" id="submit" value="Submit">
+			</div>
+		</form>
+	</main>
+	
+	<footer>
+		<div>
+			<p> This is not an official site of the University of Sheffield. </p>
+			<p> All views and statements are an opinion of the creator of the site,
+				which is a Computer Science student.</p>
+		</div>
+		<aside>
+			<p> &copy; Agne Knietaite </p>
+			<p> 2019 </p>
+		</aside>
+	</footer>
+
+	
+</body>
+
+
+</html>
