@@ -1,4 +1,4 @@
-# University-Website-COM1008
+# Website-University-Project-COM1008
 
 ### First Year University assignment for Web & Internet Technology module.
 
