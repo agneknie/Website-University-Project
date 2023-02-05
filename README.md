@@ -1,6 +1,6 @@
 # Website-University-Project
 
-### First Year University assignment for Web & Internet Technology module. Achieved Grade: 80%.
+### First Year University assignment for Web & Internet Technology module. Achieved Grade: 80% (First Class).
 
 # 
 
